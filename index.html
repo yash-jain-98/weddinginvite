@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Shaurya weds Aanya · Wedding Digital Invitation</title>
+  
+  <meta name="description" content="Solicit your gracious presence & blessings on the auspicious occasion of the wedding of Shaurya and Aanya. 12th & 13th Nov 2027, Rajmahal Gardens, Jaipur.">
+  <meta property="og:title" content="Shaurya weds Aanya · Wedding Digital Invitation">
+  <meta property="og:description" content="Save this Moment with us · 12th & 13th Nov 2027 · Rajmahal Gardens, Amer Road, Jaipur">
+  <meta property="og:image" content="./assets/og.jpg">
+
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <!-- Background Music Audio Tag -->
+  <audio id="bg-music" src="./assets/shehnai-flute.mp3" loop preload="auto"></audio>
+
+  <!-- Floating Audio Play/Pause Button -->
+  <button type="button" class="sa-audio-btn" id="audio-toggle" aria-label="Toggle background music">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="10"></circle>
+      <circle cx="12" cy="12" r="3"></circle>
+      <path d="M12 2a10 10 0 0 1 10 10"></path>
+      <path d="M12 22a10 10 0 0 1-10-10"></path>
+    </svg>
+  </button>
+
+  <!-- SVG Global Definitions -->
+  <svg class="sa-defs" aria-hidden="true">
+    <defs>
+      <path id="saFlight" d="M156,1420.65c6.26,15.18,12.83,30.74,19.53,46.27l-13.06,5.63c-6.73-15.59-13.33-31.23-19.62-46.48Zm-49.88-88.59c5.72,15.52,11.75,31.4,17.93,47.19l13.24-5.19c-6.14-15.69-12.13-31.48-17.82-46.92Zm-32.84-95.51c5,15.76,10.37,31.89,15.89,48l13.45-4.63c-5.49-15.95-10.8-32-15.78-47.63Zm-28.13-97c4.16,16,8.68,32.39,13.42,48.72l13.66-4c-4.71-16.2-9.19-32.47-13.32-48.34Zm137.67,379.2c6.76,15,13.83,30.46,21,45.86l12.89-6c-7.16-15.34-14.2-30.71-20.93-45.67ZM36.63,1038.22l-14,2.7c3.14,16.22,6.66,32.87,10.45,49.48L47,1087.24C43.22,1070.77,39.74,1054.28,36.63,1038.22ZM539.75,341.71c16.43.68,33.19,1.84,49.82,3.44L590.93,331c-16.88-1.62-33.9-2.8-50.59-3.49ZM438.89,329.19l1.1,14.18c16.27-1.27,33-2.05,49.84-2.31l-.22-14.22C472.51,327.11,455.45,327.9,438.89,329.19ZM338.41,344.11,341.55,358c15.79-3.57,32.24-6.62,48.92-9.07l-2.07-14.07C371.37,337.34,354.55,340.46,338.41,344.11ZM241.47,375.3l5.65,13.06c14.78-6.4,30.41-12.24,46.46-17.37l-4.32-13.54C272.76,362.71,256.68,368.72,241.47,375.3Zm1050,322.35c-9.83-13.65-20.49-27.08-31.67-39.94l-10.73,9.34c10.9,12.53,21.28,25.62,30.86,38.92Zm-66.72-76.84c-11.94-11.63-24.5-23.19-37.35-34.35l-9.33,10.73c12.64,11,25,22.36,36.75,33.8ZM202.86,410.49l-7.09-12.34a405.45,405.45,0,0,0-42.67,28.2l8.6,11.34A387.74,387.74,0,0,1,202.86,410.49Zm436.28-59.23c16.25,2.44,32.8,5.35,49.18,8.65L691.14,346c-16.62-3.35-33.41-6.31-49.89-8.78ZM124.59,470.08l-10.08-10A352.72,352.72,0,0,0,81.08,499l11.44,8.45A338.18,338.18,0,0,1,124.59,470.08Zm1201.3,144.54-9.11-10.93A402.38,402.38,0,0,0,1279.66,639l10.43,9.67A386.85,386.85,0,0,1,1325.89,614.62ZM66.26,549.05l-12.54-6.7A372.92,372.92,0,0,0,32.79,589.1L46.13,594A361.62,361.62,0,0,1,66.26,549.05ZM14.19,839.55,0,839.88c.39,16.57,1.2,33.6,2.42,50.62l14.19-1C15.38,872.69,14.58,855.89,14.19,839.55Zm3-99.79L3,738.54C1.56,755.08.59,772.12.09,789.19l14.22.41C14.8,772.8,15.75,756,17.16,739.76Zm4.08,199.53L7.12,940.93c1.9,16.44,4.19,33.32,6.82,50.15L28,988.89C25.39,972.24,23.12,955.55,21.24,939.29Zm7.33-281.84c1.05-5.41,2.21-10.83,3.44-16.12l-13.85-3.24c-1.27,5.46-2.47,11.07-3.56,16.65-2.12,10.94-4,22.17-5.71,33.38L23,690.22C24.59,679.21,26.48,668.19,28.57,657.45ZM1360,572.9l-1.46.88,7.4,12.15,1.36-.83a365.89,365.89,0,0,1,42.46-21.79l-5.66-13A380,380,0,0,0,1360,572.9ZM1366,934.58c.33,6.21.5,12.48.5,18.64,0,10.23-.47,20.53-1.39,30.61l14.17,1.29c1-10.51,1.44-21.24,1.44-31.9,0-6.42-.17-12.94-.52-19.4Zm8-51.62a416.61,416.61,0,0,0-12.74-49.56l-13.53,4.37a404.39,404.39,0,0,1,12.3,47.86Zm78.28-350,3.94,13.67a421.13,421.13,0,0,1,48.25-10.86l-2.31-14A438,438,0,0,0,1452.26,533ZM1341.8,1079.19l13.17,5.38a347.86,347.86,0,0,0,15.88-48.81l-13.82-3.38A333.26,333.26,0,0,1,1341.8,1079.19ZM1319.31,740.4,1307,747.57a482.94,482.94,0,0,1,22.79,44l13-5.86A495.05,495.05,0,0,0,1319.31,740.4Zm431.14-186.93c15.82,4.38,31.82,9.41,47.57,14.94l4.71-13.43c-16-5.63-32.36-10.75-48.48-15.22Zm-461.4,572.73h0a50.8,50.8,0,0,1-13.41-1.9l-1.37-.4-4.1,13.62,1.7.49a64.88,64.88,0,0,0,17.18,2.41h0a57.12,57.12,0,0,0,35.11-12.13l-8.59-11.34A43.18,43.18,0,0,1,1289.05,1126.2Zm263.83-610,.82,14.19c16.15-.93,32.82-1.09,49.64-.47l.52-14.21C1586.59,515,1569.48,515.19,1552.88,516.16Zm291.65,70.28c15.24,6.48,30.47,13.54,45.25,21l6.39-12.7c-15.05-7.57-30.55-14.76-46.07-21.36Zm-191.65-52.57c16.16,2,32.68,4.67,49.12,8l2.82-14c-16.8-3.39-33.69-6.14-50.21-8.16Zm-444.06,523.89-12.42,6.93a265.92,265.92,0,0,0,24.54,36.47c1.66,2.07,3.37,4.1,5.07,6l10.64-9.43c-1.55-1.75-3.1-3.59-4.61-5.48A251.91,251.91,0,0,1,1208.82,1057.76Zm10.47-336.46,12.34,7.08a449.48,449.48,0,0,1,27-41.53l-11.47-8.41A461.88,461.88,0,0,0,1219.29,721.3ZM1014.71,482.4c14.51,8.23,29,16.86,42.92,25.67l7.59-12c-14.16-8.92-28.79-17.68-43.5-26Zm84.57,53.35c13.7,9.59,27.23,19.59,40.21,29.7l8.74-11.22c-13.17-10.26-26.9-20.4-40.8-30.13Zm-266.52-136c15.63,5.48,31.38,11.4,46.81,17.6l5.3-13.2c-15.63-6.28-31.57-12.27-47.4-17.82ZM925.57,437c15.15,6.88,30.32,14.18,45.08,21.68L977.09,446c-14.94-7.6-30.3-15-45.65-22ZM1196.33,767a442.32,442.32,0,0,0-17.7,48l13.61,4.14a428.09,428.09,0,0,1,17.13-46.43ZM737.05,371c16,4,32.2,8.5,48.18,13.32l4.1-13.62c-16.18-4.88-32.6-9.42-48.81-13.5Zm443.79,496.15-14-2.38a363.81,363.81,0,0,0-5.08,51l14.22.39A349.23,349.23,0,0,1,1180.84,867.12Zm-16.44,100a286,286,0,0,0,11.38,50.27l13.52-4.4a272.76,272.76,0,0,1-10.81-47.77ZM1970,617.63a29.86,29.86,0,0,0-19.47,7.21c-3.14-1.91-6.29-3.81-9.45-5.67l-7.22,12.25q4.17,2.46,8.33,5A30,30,0,1,0,1970,617.63ZM248.81,1613.17a29.68,29.68,0,0,0-5.85.58l-4.74-9.81-12.81,6.18q2.33,4.83,4.66,9.64a30,30,0,1,0,18.74-6.59Z"></path>
+    </defs>
+  </svg>
+
+  <div class="sa-root" data-stage="cover">
+
+    <!-- 1. The Interactive 3D Envelope -->
+    <div class="sa-env" data-sa-cover="" data-state="cover">
+      <h1 class="sr-only">Shaurya &amp; Aanya</h1>
+      <div class="sa-env-col">
+        <i class="sa-env-base" aria-hidden="true"></i>
+        <img class="sa-env-pocket" src="./assets/flap.webp" alt="" aria-hidden="true" width="1024" height="1536" decoding="async" draggable="false"/>
+        
+        <div class="sa-env-flap" aria-hidden="true">
+          <img class="sa-env-flap-front" src="./assets/flap.webp" alt="" width="1024" height="1536" decoding="async" fetchpriority="high" draggable="false"/>
+          <i class="sa-env-flap-back"></i>
+        </div>
+
+        <button type="button" class="sa-env-seal" aria-label="Open the invitation">
+          <i class="sa-env-ring" aria-hidden="true"></i>
+          <svg viewBox="-70 -72 140 144" aria-hidden="true">
+            <defs>
+              <radialGradient id="saWax" cx="38%" cy="32%" r="78%">
+                <stop offset="0" stop-color="#a8483d"></stop>
+                <stop offset=".42" stop-color="#8c2f27"></stop>
+                <stop offset=".8" stop-color="#6e211b"></stop>
+                <stop offset="1" stop-color="#551915"></stop>
+              </radialGradient>
+              <radialGradient id="saWaxIn" cx="60%" cy="66%" r="80%">
+                <stop offset="0" stop-color="#8f3128"></stop>
+                <stop offset=".7" stop-color="#7a271f"></stop>
+                <stop offset="1" stop-color="#64201a"></stop>
+              </radialGradient>
+            </defs>
+            <path d="M59.7 -6.5Q62.8 0 61.5 6.9Q60.2 13.7 55.4 19.1Q50.6 24.4 51.6 33.2Q52.6 42 44.9 44.3Q37.2 46.6 32.7 52.7Q28.3 58.8 20.6 57.8Q13 56.8 6.5 57.9Q0 59.1 -6.9 59.9Q-13.9 60.7 -20.1 57.7Q-26.3 54.6 -34.6 54.2Q-42.9 53.9 -43.4 44.4Q-43.9 35 -49.8 30.9Q-55.8 26.9 -57 20.1Q-58.2 13.3 -60.9 6.6Q-63.5 0 -62.4 -7Q-61.3 -14 -56.2 -19.3Q-51.2 -24.6 -51.4 -32.9Q-51.6 -41.2 -44.1 -43.5Q-36.5 -45.8 -32.6 -52.7Q-28.7 -59.5 -20.9 -58.7Q-13.2 -57.8 -6.6 -58.7Q0 -59.5 6.7 -59.3Q13.5 -59.1 19.8 -56.6Q26.1 -54.1 34.8 -54.3Q43.4 -54.5 44.1 -45.1Q44.8 -35.8 50.3 -31.3Q55.7 -26.8 56.2 -19.9Q56.6 -12.9 59.7 -6.5Z" fill="url(#saWax)"></path>
+            <path d="M59.7 -6.5Q62.8 0 61.5 6.9Q60.2 13.7 55.4 19.1Q50.6 24.4 51.6 33.2Q52.6 42 44.9 44.3Q37.2 46.6 32.7 52.7Q28.3 58.8 20.6 57.8Q13 56.8 6.5 57.9Q0 59.1 -6.9 59.9Q-13.9 60.7 -20.1 57.7Q-26.3 54.6 -34.6 54.2Q-42.9 53.9 -43.4 44.4Q-43.9 35 -49.8 30.9Q-55.8 26.9 -57 20.1Q-58.2 13.3 -60.9 6.6Q-63.5 0 -62.4 -7Q-61.3 -14 -56.2 -19.3Q-51.2 -24.6 -51.4 -32.9Q-51.6 -41.2 -44.1 -43.5Q-36.5 -45.8 -32.6 -52.7Q-28.7 -59.5 -20.9 -58.7Q-13.2 -57.8 -6.6 -58.7Q0 -59.5 6.7 -59.3Q13.5 -59.1 19.8 -56.6Q26.1 -54.1 34.8 -54.3Q43.4 -54.5 44.1 -45.1Q44.8 -35.8 50.3 -31.3Q55.7 -26.8 56.2 -19.9Q56.6 -12.9 59.7 -6.5Z" fill="none" stroke="#c46a5c" stroke-opacity=".35" stroke-width="1.4" transform="translate(-1 -1.2) scale(.985)"></path>
+            <circle r="44" fill="url(#saWaxIn)"></circle>
+            <circle r="44" fill="none" stroke="#4a130f" stroke-opacity=".55" stroke-width="2.4" transform="translate(.8 1)"></circle>
+            <circle r="44" fill="none" stroke="#d27c6c" stroke-opacity=".4" stroke-width="1.4" transform="translate(-.9 -1)"></circle>
+            <circle r="38.5" fill="none" stroke="#4a130f" stroke-opacity=".35" stroke-width="1" stroke-dasharray="1.2 2.6"></circle>
+            
+            <!-- Embossed Monogram 'SA' -->
+            <g transform="translate(1.1 1.4)" fill="#3a0e0b" opacity=".6">
+              <path transform="translate(-38.67 11.93) scale(0.0639)" d="M279 95Q238 95 177 46Q134 39 103.5 27.5Q73 16 53 0Q25 -24 4 -64Q-17 -104 -17 -141Q-17 -169 -4 -191Q26 -244 72 -244Q107 -244 113 -185Q120 -130 124.5 -97.5Q129 -65 132 -55Q147 -6 183 28Q225 37 274 37Q382 37 481 -4Q523 -22 563 -51Q603 -80 629 -115Q655 -150 655 -183Q655 -230 572 -256L396 -296Q342 -308 309.5 -338.5Q277 -369 277 -408Q277 -468 352 -528Q390 -559 441 -580.5Q492 -602 548.5 -613.5Q605 -625 657 -625Q731 -625 783.5 -602Q836 -579 849 -535Q852 -525 852 -513Q852 -452 791 -428Q754 -413 728 -413Q712 -413 703 -419Q701 -421 701 -424Q701 -431 729 -432Q746 -433 757 -435Q768 -437 773 -439Q811 -459 811 -498Q811 -518 800 -540Q769 -597 645 -597Q600 -597 552 -587.5Q504 -578 461 -559.5Q418 -541 388 -513Q336 -465 336 -427Q336 -398 364.5 -375.5Q393 -353 451 -342L569 -320Q637 -307 679 -281.5Q721 -256 721 -204Q721 -158 698 -118Q675 -78 636.5 -46.5Q598 -15 549 6Q438 55 287 55Q268 55 249 54Q230 53 212 51Q226 59 247.5 67Q269 75 297 82Q300 83 300 86Q300 95 279 95ZM147 18Q120 -12 105 -44Q83 -94 72 -167Q64 -220 55 -220Q47 -220 33.5 -208Q20 -196 20 -157Q20 -81 74 -25Q101 3 147 18Z"></path>
+              <path transform="translate(-10.16 18.25) scale(0.0407)" d="M153 116Q-1 103 -1 -42Q-1 -128 53 -224Q85 -282 133.5 -337Q182 -392 239.5 -436.5Q297 -481 357.5 -507Q418 -533 474 -533Q573 -533 573 -460Q573 -411 543 -351Q513 -291 482 -275Q479 -274 475 -274Q472 -274 472 -276L505 -330Q539 -386 539 -428Q539 -458 523 -485Q507 -512 466 -512Q416 -512 363.5 -484Q311 -456 262 -410Q213 -364 173 -308.5Q133 -253 109 -199Q58 -84 58 -13Q58 94 167 94Q271 94 449 -40Q490 -71 554.5 -127Q619 -183 706 -263Q694 -262 676 -260.5Q658 -259 634 -255Q624 -253 615 -251.5Q606 -250 598 -250Q578 -252 581 -260Q585 -297 619 -297Q650 -293 677.5 -291Q705 -289 730 -289Q769 -325 833.5 -389.5Q898 -454 987 -548Q1102 -669 1127 -669Q1138 -669 1138 -649Q1138 -641 1136 -629Q1134 -617 1130 -601Q1120 -563 1109 -555Q1078 -533 1057.5 -498.5Q1037 -464 1016 -422Q995 -379 977.5 -345.5Q960 -312 946 -286L1043 -288Q1079 -288 1079 -283Q1079 -282 1077 -280Q1060 -269 933 -260Q840 -79 840 -12Q840 34 869 34Q880 34 897 20Q913 7 917 7Q917 5 918 6Q919 7 917 7Q912 25 887.5 39.5Q863 54 836 54Q811 54 803 38Q795 22 795 -6Q795 -107 872 -263L752 -260Q618 -129 483 -30Q268 126 153 116ZM881 -289Q893 -312 929 -372.5Q965 -433 1026 -530L770 -290Z"></path>
+            </g>
+            <g transform="translate(-.9 -1.1)" fill="#e39a87" opacity=".6">
+              <path transform="translate(-38.67 11.93) scale(0.0639)" d="M279 95Q238 95 177 46Q134 39 103.5 27.5Q73 16 53 0Q25 -24 4 -64Q-17 -104 -17 -141Q-17 -169 -4 -191Q26 -244 72 -244Q107 -244 113 -185Q120 -130 124.5 -97.5Q129 -65 132 -55Q147 -6 183 28Q225 37 274 37Q382 37 481 -4Q523 -22 563 -51Q603 -80 629 -115Q655 -150 655 -183Q655 -230 572 -256L396 -296Q342 -308 309.5 -338.5Q277 -369 277 -408Q277 -468 352 -528Q390 -559 441 -580.5Q492 -602 548.5 -613.5Q605 -625 657 -625Q731 -625 783.5 -602Q836 -579 849 -535Q852 -525 852 -513Q852 -452 791 -428Q754 -413 728 -413Q712 -413 703 -419Q701 -421 701 -424Q701 -431 729 -432Q746 -433 757 -435Q768 -437 773 -439Q811 -459 811 -498Q811 -518 800 -540Q769 -597 645 -597Q600 -597 552 -587.5Q504 -578 461 -559.5Q418 -541 388 -513Q336 -465 336 -427Q336 -398 364.5 -375.5Q393 -353 451 -342L569 -320Q637 -307 679 -281.5Q721 -256 721 -204Q721 -158 698 -118Q675 -78 636.5 -46.5Q598 -15 549 6Q438 55 287 55Q268 55 249 54Q230 53 212 51Q226 59 247.5 67Q269 75 297 82Q300 83 300 86Q300 95 279 95ZM147 18Q120 -12 105 -44Q83 -94 72 -167Q64 -220 55 -220Q47 -220 33.5 -208Q20 -196 20 -157Q20 -81 74 -25Q101 3 147 18Z"></path>
+              <path transform="translate(-10.16 18.25) scale(0.0407)" d="M153 116Q-1 103 -1 -42Q-1 -128 53 -224Q85 -282 133.5 -337Q182 -392 239.5 -436.5Q297 -481 357.5 -507Q418 -533 474 -533Q573 -533 573 -460Q573 -411 543 -351Q513 -291 482 -275Q479 -274 475 -274Q472 -274 472 -276L505 -330Q539 -386 539 -428Q539 -458 523 -485Q507 -512 466 -512Q416 -512 363.5 -484Q311 -456 262 -410Q213 -364 173 -308.5Q133 -253 109 -199Q58 -84 58 -13Q58 94 167 94Q271 94 449 -40Q490 -71 554.5 -127Q619 -183 706 -263Q694 -262 676 -260.5Q658 -259 634 -255Q624 -253 615 -251.5Q606 -250 598 -250Q578 -252 581 -260Q585 -297 619 -297Q650 -293 677.5 -291Q705 -289 730 -289Q769 -325 833.5 -389.5Q898 -454 987 -548Q1102 -669 1127 -669Q1138 -669 1138 -649Q1138 -641 1136 -629Q1134 -617 1130 -601Q1120 -563 1109 -555Q1078 -533 1057.5 -498.5Q1037 -464 1016 -422Q995 -379 977.5 -345.5Q960 -312 946 -286L1043 -288Q1079 -288 1079 -283Q1079 -282 1077 -280Q1060 -269 933 -260Q840 -79 840 -12Q840 34 869 34Q880 34 897 20Q913 7 917 7Q917 5 918 6Q919 7 917 7Q912 25 887.5 39.5Q863 54 836 54Q811 54 803 38Q795 22 795 -6Q795 -107 872 -263L752 -260Q618 -129 483 -30Q268 126 153 116ZM881 -289Q893 -312 929 -372.5Q965 -433 1026 -530L770 -290Z"></path>
+            </g>
+            <g fill="#6e2019">
+              <path transform="translate(-38.67 11.93) scale(0.0639)" d="M279 95Q238 95 177 46Q134 39 103.5 27.5Q73 16 53 0Q25 -24 4 -64Q-17 -104 -17 -141Q-17 -169 -4 -191Q26 -244 72 -244Q107 -244 113 -185Q120 -130 124.5 -97.5Q129 -65 132 -55Q147 -6 183 28Q225 37 274 37Q382 37 481 -4Q523 -22 563 -51Q603 -80 629 -115Q655 -150 655 -183Q655 -230 572 -256L396 -296Q342 -308 309.5 -338.5Q277 -369 277 -408Q277 -468 352 -528Q390 -559 441 -580.5Q492 -602 548.5 -613.5Q605 -625 657 -625Q731 -625 783.5 -602Q836 -579 849 -535Q852 -525 852 -513Q852 -452 791 -428Q754 -413 728 -413Q712 -413 703 -419Q701 -421 701 -424Q701 -431 729 -432Q746 -433 757 -435Q768 -437 773 -439Q811 -459 811 -498Q811 -518 800 -540Q769 -597 645 -597Q600 -597 552 -587.5Q504 -578 461 -559.5Q418 -541 388 -513Q336 -465 336 -427Q336 -398 364.5 -375.5Q393 -353 451 -342L569 -320Q637 -307 679 -281.5Q721 -256 721 -204Q721 -158 698 -118Q675 -78 636.5 -46.5Q598 -15 549 6Q438 55 287 55Q268 55 249 54Q230 53 212 51Q226 59 247.5 67Q269 75 297 82Q300 83 300 86Q300 95 279 95ZM147 18Q120 -12 105 -44Q83 -94 72 -167Q64 -220 55 -220Q47 -220 33.5 -208Q20 -196 20 -157Q20 -81 74 -25Q101 3 147 18Z"></path>
+              <path transform="translate(-10.16 18.25) scale(0.0407)" d="M153 116Q-1 103 -1 -42Q-1 -128 53 -224Q85 -282 133.5 -337Q182 -392 239.5 -436.5Q297 -481 357.5 -507Q418 -533 474 -533Q573 -533 573 -460Q573 -411 543 -351Q513 -291 482 -275Q479 -274 475 -274Q472 -274 472 -276L505 -330Q539 -386 539 -428Q539 -458 523 -485Q507 -512 466 -512Q416 -512 363.5 -484Q311 -456 262 -410Q213 -364 173 -308.5Q133 -253 109 -199Q58 -84 58 -13Q58 94 167 94Q271 94 449 -40Q490 -71 554.5 -127Q619 -183 706 -263Q694 -262 676 -260.5Q658 -259 634 -255Q624 -253 615 -251.5Q606 -250 598 -250Q578 -252 581 -260Q585 -297 619 -297Q650 -293 677.5 -291Q705 -289 730 -289Q769 -325 833.5 -389.5Q898 -454 987 -548Q1102 -669 1127 -669Q1138 -669 1138 -649Q1138 -641 1136 -629Q1134 -617 1130 -601Q1120 -563 1109 -555Q1078 -533 1057.5 -498.5Q1037 -464 1016 -422Q995 -379 977.5 -345.5Q960 -312 946 -286L1043 -288Q1079 -288 1079 -283Q1079 -282 1077 -280Q1060 -269 933 -260Q840 -79 840 -12Q840 34 869 34Q880 34 897 20Q913 7 917 7Q917 5 918 6Q919 7 917 7Q912 25 887.5 39.5Q863 54 836 54Q811 54 803 38Q795 22 795 -6Q795 -107 872 -263L752 -260Q618 -129 483 -30Q268 126 153 116ZM881 -289Q893 -312 929 -372.5Q965 -433 1026 -530L770 -290Z"></path>
+            </g>
+            <ellipse cx="-22" cy="-30" rx="13" ry="6" fill="#fff" opacity=".12" transform="rotate(-35 -22 -30)"></ellipse>
+          </svg>
+        </button>
+
+        <div class="sa-env-foot">
+          <p class="sa-env-guest">Click to open</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. The Logo Stage (Intermediate reveal arch) -->
+    <div class="sa-logo" role="button" tabindex="-1" aria-label="Shaurya and Aanya: open the card">
+      <div class="sa-logo-col">
+        <div class="sa-logo-board">
+          <img src="./assets/ganesh.webp" alt="Lord Ganesha" aria-hidden="true" width="256" height="332" loading="eager" decoding="async" draggable="false" class="sa-at sa-pic sa-rv" style="--x:151;--y:80;--w:73;--h:95"/>
+          
+          <svg class="sa-at sa-goldmono sa-pic sa-rv" style="--x:17;--y:196;--w:342;--h:308" viewBox="-60 -54 120 108" aria-hidden="true">
+            <defs>
+              <linearGradient id="saGold" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#f3d488"></stop>
+                <stop offset=".35" stop-color="#c99330"></stop>
+                <stop offset=".6" stop-color="#e9c06a"></stop>
+                <stop offset="1" stop-color="#a8741f"></stop>
+              </linearGradient>
+            </defs>
+            <circle r="47" fill="none" stroke="url(#saGold)" stroke-width=".9"></circle>
+            <circle r="43.5" fill="none" stroke="url(#saGold)" stroke-width=".35" stroke-dasharray="1 2.2"></circle>
+            <g fill="url(#saGold)">
+              <path transform="translate(-38.67 11.93) scale(0.0639)" d="M279 95Q238 95 177 46Q134 39 103.5 27.5Q73 16 53 0Q25 -24 4 -64Q-17 -104 -17 -141Q-17 -169 -4 -191Q26 -244 72 -244Q107 -244 113 -185Q120 -130 124.5 -97.5Q129 -65 132 -55Q147 -6 183 28Q225 37 274 37Q382 37 481 -4Q523 -22 563 -51Q603 -80 629 -115Q655 -150 655 -183Q655 -230 572 -256L396 -296Q342 -308 309.5 -338.5Q277 -369 277 -408Q277 -468 352 -528Q390 -559 441 -580.5Q492 -602 548.5 -613.5Q605 -625 657 -625Q731 -625 783.5 -602Q836 -579 849 -535Q852 -525 852 -513Q852 -452 791 -428Q754 -413 728 -413Q712 -413 703 -419Q701 -421 701 -424Q701 -431 729 -432Q746 -433 757 -435Q768 -437 773 -439Q811 -459 811 -498Q811 -518 800 -540Q769 -597 645 -597Q600 -597 552 -587.5Q504 -578 461 -559.5Q418 -541 388 -513Q336 -465 336 -427Q336 -398 364.5 -375.5Q393 -353 451 -342L569 -320Q637 -307 679 -281.5Q721 -256 721 -204Q721 -158 698 -118Q675 -78 636.5 -46.5Q598 -15 549 6Q438 55 287 55Q268 55 249 54Q230 53 212 51Q226 59 247.5 67Q269 75 297 82Q300 83 300 86Q300 95 279 95ZM147 18Q120 -12 105 -44Q83 -94 72 -167Q64 -220 55 -220Q47 -220 33.5 -208Q20 -196 20 -157Q20 -81 74 -25Q101 3 147 18Z"></path>
+              <path transform="translate(-10.16 18.25) scale(0.0407)" d="M153 116Q-1 103 -1 -42Q-1 -128 53 -224Q85 -282 133.5 -337Q182 -392 239.5 -436.5Q297 -481 357.5 -507Q418 -533 474 -533Q573 -533 573 -460Q573 -411 543 -351Q513 -291 482 -275Q479 -274 475 -274Q472 -274 472 -276L505 -330Q539 -386 539 -428Q539 -458 523 -485Q507 -512 466 -512Q416 -512 363.5 -484Q311 -456 262 -410Q213 -364 173 -308.5Q133 -253 109 -199Q58 -84 58 -13Q58 94 167 94Q271 94 449 -40Q490 -71 554.5 -127Q619 -183 706 -263Q694 -262 676 -260.5Q658 -259 634 -255Q624 -253 615 -251.5Q606 -250 598 -250Q578 -252 581 -260Q585 -297 619 -297Q650 -293 677.5 -291Q705 -289 730 -289Q769 -325 833.5 -389.5Q898 -454 987 -548Q1102 -669 1127 -669Q1138 -669 1138 -649Q1138 -641 1136 -629Q1134 -617 1130 -601Q1120 -563 1109 -555Q1078 -533 1057.5 -498.5Q1037 -464 1016 -422Q995 -379 977.5 -345.5Q960 -312 946 -286L1043 -288Q1079 -288 1079 -283Q1079 -282 1077 -280Q1060 -269 933 -260Q840 -79 840 -12Q840 34 869 34Q880 34 897 20Q913 7 917 7Q917 5 918 6Q919 7 917 7Q912 25 887.5 39.5Q863 54 836 54Q811 54 803 38Q795 22 795 -6Q795 -107 872 -263L752 -260Q618 -129 483 -30Q268 126 153 116ZM881 -289Q893 -312 929 -372.5Q965 -433 1026 -530L770 -290Z"></path>
+            </g>
+          </svg>
+
+          <h2 class="sa-at sa-t sa-sg sa-rv" style="--x:37.5;--y:537;--w:300;--fs:38;--lh:55;--ls:1.6;color:#6c2118">
+            <span class="sa-line" style="--ld:0.00s;--td:0.49s;--n:11">#ShaurAanya</span>
+          </h2>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ambient Floating Petals -->
+    <div class="sa-ambient" aria-hidden="true">
+      <div class="sa-ambient-col"></div>
+    </div>
+
+    <!-- 3. The Main Invitation Card -->
+    <main>
+      <!-- Sticky Background & Lantern Candles -->
+      <div class="sa-bg" aria-hidden="true">
+        <div class="sa-bg-stick">
+          <i class="sa-bg-img"></i>
+          <div class="sa-curtains" aria-hidden="true">
+            <i class="sa-at sa-glow" style="--x:49;--y:104;--w:0;--d:0s"></i>
+            <i class="sa-at sa-glow" style="--x:309;--y:90;--w:0;--d:0.6s"></i>
+            <i class="sa-at sa-glow" style="--x:328;--y:129;--w:0;--d:1.2s"></i>
+          </div>
+        </div>
+      </div>
+
+      <div id="sa-card" class="sa-card">
+
+        <!-- ================= SLIDE 0: HERO & BLESSING ================= -->
+        <section data-sa-sec="" class="sa-slide sa-slide-first" style="--bh:616" aria-label="Shaurya weds Aanya">
+          <div class="sa-board">
+            <img src="./assets/ganesh.webp" alt="Lord Ganesha" aria-hidden="true" width="256" height="332" loading="lazy" decoding="async" draggable="false" class="sa-at sa-pic sa-rv" style="--x:157;--y:31;--w:61;--h:79;--sd:0.00s;"/>
+
+            <p class="sa-at sa-t sa-ka sa-rv" style="--x:78;--y:145;--w:220;--fs:11.7;--lh:17.6;--ls:0.63;color:#b20e00;--sd:0.22s;" lang="sa">
+              <span class="sa-line" style="--ld:0.00s;--td:0.93s;--n:34">वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ।</span>
+              <span class="sa-line" style="--ld:0.93s;--td:1.17s;--n:43">निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा॥</span>
+            </p>
+
+            <p class="sa-at sa-t sa-gv sa-rv sa-stroke" style="--x:41;--y:213;--w:294;--fs:15.7;--lh:18.5;--ls:1.4;color:#611c1c;--sw:0.39;--sc:#310000;--sd:0.44s;">
+              <span class="sa-line" style="--ld:0.00s;--td:0.70s;--n:32">Solicit your gracious presence &amp;</span>
+              <span class="sa-line" style="--ld:0.70s;--td:0.79s;--n:36">blessings on the auspicious occasion</span>
+              <span class="sa-line" style="--ld:1.49s;--td:0.61s;--n:28">of wedding of our loving Son</span>
+            </p>
+
+            <h2 class="sa-at sa-t sa-ab sa-rv sa-stroke" style="--x:100;--y:310;--w:175;--fs:44.7;--lh:51.3;--ls:0;color:#b20e00;--sw:1.12;--sc:#b20e00;--sd:0.66s;">
+              <span class="sa-line" style="--ld:0.00s;--td:0.32s;--n:7">Shaurya</span>
+            </h2>
+
+            <p class="sa-at sa-t sa-ab sa-rv sa-stroke" style="--x:88;--y:361;--w:200;--fs:17.2;--lh:22.2;--ls:0.93;color:#611c1c;--sw:0.43;--sc:#310000;--sd:0.88s;">
+              <span class="sa-line" style="--ld:0.00s;--td:1.17s;--n:26">S/o Smt. Neha Malhotra and</span>
+              <span class="sa-line" style="--ld:1.17s;--td:0.81s;--n:18">Sh. Rajiv Malhotra</span>
+            </p>
+
+            <p class="sa-at sa-t sa-gv sa-rv sa-stroke" style="--x:139;--y:424;--w:98;--fs:23.6;--lh:37.4;--ls:1.28;color:#b20e00;--sw:0.59;--sc:#b20e00;--sd:1.10s;">
+              <span class="sa-line" style="--ld:0.00s;--td:0.36s;--n:8">- with -</span>
+            </p>
+
+            <h2 class="sa-at sa-t sa-ab sa-rv sa-stroke" style="--x:100;--y:484;--w:175;--fs:44.7;--lh:51.3;--ls:0;color:#b20e00;--sw:1.12;--sc:#b20e00;--sd:1.32s;">
+              <span class="sa-line" style="--ld:0.00s;--td:0.22s;--n:5">Aanya</span>
+            </h2>
+
+            <p class="sa-at sa-t sa-gv sa-rv sa-stroke" style="--x:77;--y:545;--w:230;--fs:17;--lh:21.8;--ls:0.92;color:#611c1c;--sw:0.43;--sc:#310000;--sd:1.54s;">
+              <span class="sa-line" style="--ld:0.00s;--td:1.13s;--n:25">D/o Smt. Pooja Kapoor and</span>
+              <span class="sa-line" style="--ld:1.13s;--td:0.77s;--n:17">Sh. Vikram Kapoor</span>
+            </p>
+          </div>
+        </section>
+
+        <!-- ================= SLIDE 1: SAVE THE DATE & SCRATCH CARD ================= -->
+        <section data-sa-sec="" class="sa-slide sa-slide-save" style="--bh:545" aria-label="Save this moment">
+          <div class="sa-board">
+            <img src="./assets/garland.webp" alt="" aria-hidden="true" width="520" height="173" loading="lazy" decoding="async" draggable="false" class="sa-at sa-pic sa-rv sa-garland-mid" style="--x:106;--y:30;--w:163;--h:54;--sd:0.00s;"/>
+
+            <div class="sa-at sa-grp" style="--x:0;--y:-616;--w:375">
+              <h2 class="sa-at sa-t sa-bs sa-rv" style="--x:85;--y:746;--w:221;--fs:23.3;--lh:36.9;--ls:1.26;color:#b20e00;--sd:0.22s;">
+                <span class="sa-line" style="--ld:0.00s;--td:0.72s;--n:16">Save this Moment</span>
+              </h2>
+
+              <p class="sa-at sa-t sa-gv sa-rv" style="--x:164;--y:797;--w:48;--fs:19.6;--lh:31.1;--ls:1.06;color:#611c1c;--sd:0.44s;">
+                <span class="sa-line" style="--ld:0.00s;--td:0.32s;--n:7">with us</span>
+              </p>
+
+              <img src="./assets/date-frame.webp" alt="" aria-hidden="true" width="880" height="440" loading="lazy" decoding="async" draggable="false" class="sa-at sa-pic sa-rv" style="--x:44;--y:814;--w:286;--h:143;--sd:0.66s;"/>
+
+              <p class="sa-at sa-t sa-bs sa-rv" style="--x:80;--y:880;--w:222;--fs:20;--lh:28;--ls:0.94;color:#6c2118;--sd:0.88s;">
+                <span class="sa-line" style="--ld:0.00s;--td:0.90s;--n:20">12th &amp; 13th Nov 2027</span>
+              </p>
+
+              <!-- Interactive Scratch Card -->
+              <div class="sa-at sa-scratch sa-rv" style="--x:85;--y:980;--w:206;--h:68;--sd:1.10s;" data-state="ready" role="button" tabindex="0" aria-label="Scratch the gold card to see the countdown">
+                <div class="sa-count" role="timer" aria-live="off">
+                  <span class="sa-count-part">
+                    <span class="sa-count-cell"><b id="count-days">--</b><small>Days</small></span>
+                  </span>
+                  <span class="sa-count-part">
+                    <b class="sa-count-sep" aria-hidden="true">:</b>
+                    <span class="sa-count-cell"><b id="count-hours">--</b><small>Hours</small></span>
+                  </span>
+                  <span class="sa-count-part">
+                    <b class="sa-count-sep" aria-hidden="true">:</b>
+                    <span class="sa-count-cell"><b id="count-minutes">--</b><small>Minutes</small></span>
+                  </span>
+                  <span class="sa-count-part">
+                    <b class="sa-count-sep" aria-hidden="true">:</b>
+                    <span class="sa-count-cell"><b id="count-seconds">--</b><small>Seconds</small></span>
+                  </span>
+                </div>
+                <i class="sa-scratch-face" aria-hidden="true">Scratch here</i>
+                <canvas class="sa-scratch-gold" aria-hidden="true" width="253" height="83"></canvas>
+              </div>
+            </div>
+
+            <img src="./assets/garland.webp" alt="" aria-hidden="true" width="520" height="173" loading="lazy" decoding="async" draggable="false" class="sa-at sa-pic sa-rv sa-garland-g2" style="--x:106;--y:480;--w:163;--h:54;--sd:1.32s;"/>
+          </div>
+        </section>
+
+        <!-- ================= SLIDE 2: FRIDAY (HALDI & SANGEET) ================= -->
+        <section data-sa-sec="" class="sa-slide sa-slide-thu" style="--bh:796" aria-label="Friday 12th November">
+          <div class="sa-board">
+            <p class="sa-at sa-t sa-bs sa-rv" style="--x:67.5;--y:24;--w:241;--fs:21.8;--lh:31.5;--ls:1.07;color:#6c2118;--sd:0.00s;">
+              <span class="sa-line" style="--ld:0.00s;--td:0.90s;--n:20">Friday 12th Nov 2027</span>
+            </p>
+
+            <img src="./assets/haldi.webp" alt="Haldi ceremony" aria-hidden="true" width="480" height="439" loading="lazy" decoding="async" draggable="false" class="sa-at sa-pic sa-rv" style="--x:112.3;--y:84.9;--w:150;--h:137;--sd:0.22s;"/>
+
+            <h3 class="sa-at sa-t sa-gv sa-rv sa-stroke" style="--x:122;--y:224.8;--w:131;--fs:40.3;--lh:64;--ls:2.18;color:#b20e00;--sw:1;--sc:#b20e00;--sd:0.44s;">
+              <span class="sa-line" style="--ld:0.00s;--td:0.22s;--n:5">Haldi</span>
+            </h3>
+
+            <p class="sa-at sa-t sa-bs sa-rv" style="--x:92;--y:275.8;--w:191;--fs:18.3;--lh:29.1;--ls:0.99;color:#000;--sd:0.66s;">
+              <span class="sa-line" style="--ld:0.00s;--td:0.67s;--n:15">11:30am onwards</span>
+            </p>
+
+            <p class="sa-at sa-t sa-bs sa-rv" style="--x:92.5;--y:304.8;--w:191;--fs:14.6;--lh:23.1;--ls:0.79;color:#000;--sd:0.88s;">
+              <span class="sa-line" style="--ld:0.00s;--td:1.13s;--n:25">Attire : Shades of Yellow</span>
+            </p>
+
+            <svg class="sa-at sa-flight sa-rv" style="--x:76.5;--y:330.5;--w:62.6;--h:106.5;--sd:1.10s;" viewBox="436 -1416 1208 2056" aria-hidden="true">
+              <use href="#saFlight" transform="rotate(-60)"></use>
+            </svg>
+
+            <div class="sa-at sa-grp" style="--x:0;--y:393;--w:375">
+              <img src="./assets/sangeet.webp" alt="Sangeet & sagai" aria-hidden="true" width="480" height="439" loading="lazy" decoding="async" draggable="false" class="sa-at sa-pic sa-rv" style="--x:117.3;--y:48.1;--w:141;--h:128;--sd:1.32s;"/>
+
+              <h3 class="sa-at sa-t sa-gv sa-rv sa-stroke" style="--x:43;--y:179.5;--w:286;--fs:36.6;--lh:57.9;--ls:1.98;color:#b20e00;--sw:0.92;--sc:#b20e00;--sd:1.54s;">
+                <span class="sa-line" style="--ld:0.00s;--td:0.67s;--n:15">Sagai &amp; Sangeet</span>
+              </h3>
+
+              <p class="sa-at sa-t sa-bs sa-rv" style="--x:89;--y:231.5;--w:198;--fs:18.3;--lh:28.8;--ls:0.99;color:#000;--sd:1.76s;">
+                <span class="sa-line" style="--ld:0.00s;--td:0.67s;--n:15">5:00 pm onwards</span>
+              </p>
+
+              <p class="sa-at sa-t sa-bs sa-rv" style="--x:88.5;--y:261.5;--w:198;--fs:14.6;--lh:23.1;--ls:0.79;color:#000;--sd:1.98s;">
+                <span class="sa-line" style="--ld:0.00s;--td:1.08s;--n:24">Attire : Western Glamour</span>
+              </p>
+            </div>
+
+            <img src="./assets/garland.webp" alt="" aria-hidden="true" width="520" height="173" loading="lazy" decoding="async" draggable="false" class="sa-at sa-pic sa-rv sa-garland-g3" style="--x:106;--y:727.4;--w:163;--h:54;--sd:2.20s;"/>
+          </div>
+        </section>
+
+        <!-- ================= SLIDE 3: SATURDAY (BAARAT & LUNCH) ================= -->
+        <section data-sa-sec="" class="sa-slide" style="--bh:742.6" aria-label="Saturday 13th November">
+          <div class="sa-board">
+            <p class="sa-at sa-t sa-bs sa-rv" style="--x:39.5;--y:34;--w:297;--fs:21.8;--lh:31.3;--ls:1.07;color:#6c2118;--sd:0.00s;">
+              <span class="sa-line" style="--ld:0.00s;--td:1.03s;--n:23">Saturday, 13th Nov 2027</span>
+            </p>
+
+            <img src="./assets/baraat.webp" alt="Baarat ceremony" aria-hidden="true" width="660" height="388" loading="lazy" decoding="async" draggable="false" class="sa-at sa-pic sa-rv" style="--x:81.5;--y:92;--w:212;--h:125;--sd:0.22s;"/>
+
+            <h3 class="sa-at sa-t sa-gv sa-rv sa-stroke" style="--x:119;--y:218.7;--w:135;--fs:40.3;--lh:63.9;--ls:2.17;color:#b20e00;--sw:1;--sc:#b20e00;--sd:0.44s;">
+              <span class="sa-line" style="--ld:0.00s;--td:0.27s;--n:6">Baarat</span>
+            </h3>
+
+            <p class="sa-at sa-t sa-bs sa-rv" style="--x:54;--y:264.7;--w:267;--fs:18.3;--lh:29.1;--ls:0.99;color:#000;--sd:0.66s;">
+              <span class="sa-line" style="--ld:0.00s;--td:0.67s;--n:15">10:30am onwards</span>
+            </p>
+
+            <p class="sa-at sa-t sa-bs sa-rv" style="--x:54;--y:294.7;--w:267;--fs:12.8;--lh:20.3;--ls:0.69;color:#000;--sd:0.88s;">
+              <span class="sa-line" style="--ld:0.00s;--td:1.57s;--n:35">Attire: Traditional Indian Elegance</span>
+            </p>
+
+            <svg class="sa-at sa-flight sa-rv" style="--x:66.8;--y:317.6;--w:73.1;--h:107.9;--sd:1.10s;" viewBox="420 -1132 1376 2032" aria-hidden="true">
+              <use href="#saFlight" transform="rotate(-50.1)"></use>
+            </svg>
+
+            <div class="sa-at sa-grp" style="--x:0;--y:379;--w:375">
+              <img src="./assets/lunch.webp" alt="Wedding feast lunch" aria-hidden="true" width="500" height="457" loading="lazy" decoding="async" draggable="false" class="sa-at sa-pic sa-rv" style="--x:109.5;--y:50.5;--w:156;--h:142;--sd:1.32s;"/>
+
+              <h3 class="sa-at sa-t sa-gv sa-rv sa-stroke" style="--x:120;--y:195.7;--w:134;--fs:40.2;--lh:63.9;--ls:2.17;color:#b20e00;--sw:1;--sc:#b20e00;--sd:1.54s;">
+                <span class="sa-line" style="--ld:0.00s;--td:0.22s;--n:5">Lunch</span>
+              </h3>
+
+              <p class="sa-at sa-t sa-bs sa-rv" style="--x:106.5;--y:252.7;--w:162;--fs:18.3;--lh:29.1;--ls:0.99;color:#000;--sd:1.76s;">
+                <span class="sa-line" style="--ld:0.00s;--td:0.67s;--n:15">1:30 pm onwards</span>
+              </p>
+
+              <svg class="sa-at sa-flight sa-rv" style="--x:208.6;--y:282;--w:83;--h:109.2;--sd:1.98s;" viewBox="-1904 -1044 1508 1984" aria-hidden="true">
+                <use href="#saFlight" transform="rotate(136)"></use>
+              </svg>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================= SLIDE 4: PHERE ================= -->
+        <section data-sa-sec="" class="sa-slide" style="--bh:325.7" aria-label="Phere">
+          <div class="sa-board">
+            <img src="./assets/phere.webp" alt="Sacred Phere ceremony" aria-hidden="true" width="495" height="544" loading="lazy" decoding="async" draggable="false" class="sa-at sa-pic sa-rv" style="--x:115.8;--y:30;--w:146;--h:160;--sd:0.00s;"/>
+
+            <h3 class="sa-at sa-t sa-gv sa-rv sa-stroke" style="--x:88;--y:184.2;--w:199;--fs:40.2;--lh:63.9;--ls:2.17;color:#b20e00;--sw:1;--sc:#b20e00;--sd:0.22s;">
+              <span class="sa-line" style="--ld:0.00s;--td:0.22s;--n:5">Phere</span>
+            </h3>
+
+            <p class="sa-at sa-t sa-bs sa-rv" style="--x:73;--y:230.2;--w:230;--fs:18.3;--lh:29.1;--ls:0.99;color:#000;--sd:0.44s;">
+              <span class="sa-line" style="--ld:0.00s;--td:0.67s;--n:15">5:00 pm onwards</span>
+            </p>
+          </div>
+        </section>
+
+        <!-- ================= SLIDE 5: VENUE & DIRECTIONS ================= -->
+        <section data-sa-sec="" class="sa-slide" style="--bh:342" aria-label="Venue">
+          <div class="sa-board">
+            <h2 class="sa-at sa-t sa-gv sa-rv sa-stroke" style="--x:120;--y:39;--w:137;--fs:23.2;--lh:36.7;--ls:1.25;color:#6c2118;--sw:0.58;--sc:#b20e00;--sd:0.00s;">
+              <span class="sa-line" style="--ld:0.00s;--td:0.22s;--n:5">Venue</span>
+            </h2>
+
+            <p class="sa-at sa-t sa-bs sa-rv" style="--x:57.5;--y:92;--w:260;--fs:24.2;--lh:26.5;--ls:1.3;color:#611c1c;--sd:0.22s;">
+              <span class="sa-line" style="--ld:0.00s;--td:0.72s;--n:16">Rajmahal Gardens</span>
+            </p>
+
+            <p class="sa-at sa-t sa-bs sa-rv" style="--x:72;--y:118;--w:232;--fs:12.8;--lh:25.1;--ls:0.69;color:#611c1c;--sd:0.44s;">
+              <span class="sa-line" style="--ld:0.00s;--td:0.77s;--n:17">Amer Road, Jaipur</span>
+            </p>
+
+            <div class="sa-at sa-dir-row" style="--x:0;--y:160;--w:375">
+              <a class="sa-dir sa-rv" style="--sd:0.66s;" href="https://www.google.com/maps/search/?api=1&amp;query=Amer%20Road%2C%20Jaipur" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 34" aria-hidden="true">
+                  <path d="M12 0C5.4 0 0 5.2 0 11.7C0 20.4 12 34 12 34S24 20.4 24 11.7C24 5.2 18.6 0 12 0Z" fill="#d93025"></path>
+                  <circle cx="12" cy="11.7" r="4.6" fill="#7a1209"></circle>
+                </svg>
+                Rajmahal Gardens · Directions
+              </a>
+            </div>
+
+            <img src="./assets/garland.webp" alt="" aria-hidden="true" width="520" height="173" loading="lazy" decoding="async" draggable="false" class="sa-at sa-pic sa-rv" style="--x:106;--y:261;--w:163;--h:54;--sd:0.88s;"/>
+          </div>
+        </section>
+
+        <!-- ================= SLIDE 6: FAMILY & RSVP ================= -->
+        <section data-sa-sec="" class="sa-slide" style="--bh:430" aria-label="Awaiting your presence">
+          <div class="sa-board">
+            <div class="sa-at sa-grp" style="--x:0;--y:-740;--w:375">
+              <p class="sa-at sa-t sa-gv sa-rv sa-stroke" style="--x:47;--y:771;--w:294;--fs:19.4;--lh:26.9;--ls:1.73;color:#6c2118;--sw:0.49;--sc:#360600;--sd:0.00s;">
+                <span class="sa-line" style="--ld:0.00s;--td:1.16s;--n:31">We can’t wait to celebrate this</span>
+                <span class="sa-line" style="--ld:1.16s;--td:0.94s;--n:25">Special Occasion with you</span>
+              </p>
+
+              <h2 class="sa-at sa-t sa-gv sa-rv sa-stroke" style="--x:53;--y:859;--w:280;--fs:21.8;--lh:34.6;--ls:1.18;color:#6c2118;--sw:0.55;--sc:#360600;--sd:0.22s;">
+                <span class="sa-line" style="--ld:0.00s;--td:0.99s;--n:22">Awaiting Your Presence</span>
+              </h2>
+
+              <p class="sa-at sa-t sa-bs sa-rv" style="--x:62.5;--y:902;--w:250;--fs:25.1;--lh:29.1;--ls:0;color:#b20e00;--sd:0.44s;">
+                <span class="sa-line" style="--ld:0.00s;--td:0.77s;--n:17">Malhotra &amp; Kapoor</span>
+                <span class="sa-line" style="--ld:0.77s;--td:0.27s;--n:6">Family</span>
+              </p>
+            </div>
+
+            <div class="sa-at sa-snote" style="--x:37.5;--y:250;--w:300">
+              <p class="sa-snote-kicker">Our most premium design</p>
+              <p class="sa-snote-line">A sample by Sadar Nimantran, made for your names, dates and families.</p>
+              <p class="sa-snote-links">
+                <a href="https://wa.me/919411955202?text=Namaste%20Sadar%20Nimantran!%20I'd%20like%20the%20premium%20%22Shaurya%20weds%20Aanya%22%20design%20made%20for%20our%20family." target="_blank" rel="noopener noreferrer">Get this design</a>
+                <a href="https://sadarnimantran.in/demos" target="_blank" rel="noopener noreferrer">See all samples</a>
+              </p>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </main>
+
+    <!-- Floating Bottom Bar -->
+    <div class="sa-sbar">
+      <span class="sa-sbar-tag">Premium sample</span>
+      <a class="sa-sbar-cta" href="https://wa.me/919411955202?text=Namaste%20Sadar%20Nimantran!%20I'd%20like%20the%20premium%20%22Shaurya%20weds%20Aanya%22%20design%20made%20for%20our%20family." target="_blank" rel="noopener noreferrer">Get this design</a>
+    </div>
+
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>

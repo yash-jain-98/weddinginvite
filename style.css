@@ -1,0 +1,1011 @@
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Berkshire+Swash&family=Great+Vibes&family=Kalam:wght@400;700&family=Sedgwick+Ave&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+/* Reset and Base Setup */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #f1e2cf;
+  color: #6c2118;
+  font-family: 'Berkshire Swash', Georgia, serif;
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html:has(.sa-root[data-stage="cover"]):not([data-sa-open]),
+html:has(.sa-root:is([data-stage="opening"],[data-stage="logo"])) {
+  overflow: hidden;
+}
+
+.sa-root {
+  --gv: "Great Vibes", cursive;
+  --ab: "Alex Brush", cursive;
+  --bs: "Berkshire Swash", Georgia, serif;
+  --sg: "Sedgwick Ave", cursive;
+  --ka: "Kalam", cursive;
+  position: relative;
+  min-height: 100dvh;
+  background: #f1e2cf;
+  color: #6c2118;
+  overflow-x: clip;
+  font-family: var(--bs);
+}
+
+.sa-root :is(h1, h2, h3, p) {
+  margin: 0;
+  font-weight: 400;
+}
+
+.sa-root img {
+  display: block;
+  max-width: none;
+}
+
+.sa-root button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
+.sa-defs {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+/* Responsive Column & Container Unit */
+.sa-root main {
+  position: relative;
+  z-index: 1;
+  container-type: inline-size;
+  --u: calc(100cqw / 375);
+}
+
+@media (min-width: 520px) {
+  .sa-root {
+    background: radial-gradient(60% 50% at 50% 30%, rgba(255, 255, 255, 0.55), transparent 70%), #efdcc6;
+  }
+  .sa-root main {
+    max-width: 460px;
+    margin: 0 auto;
+    box-shadow: 0 0 0 1px rgba(201, 158, 106, 0.35), 0 0 70px rgba(120, 60, 30, 0.18);
+  }
+}
+
+/* Coordinate System Elements */
+.sa-at {
+  position: absolute;
+  left: calc(var(--x) * var(--u));
+  top: calc(var(--y) * var(--u));
+  width: calc(var(--w) * var(--u));
+}
+
+.sa-pic {
+  height: calc(var(--h) * var(--u));
+  object-fit: contain;
+  pointer-events: none;
+  user-select: none;
+}
+
+.sa-garland-mid {
+  top: calc(40.15 * var(--u) + 138.95 * min(calc(100cqw / 375 * 1.2), calc(100svh / 616)) - 25svh);
+}
+
+@supports (height: 1svh) {
+  .sa-root main {
+    --gap: calc(25svh - 138.95 * min(calc(100cqw / 375 * 1.2), calc(100svh / 616)) + 54.35 * var(--u));
+  }
+  .sa-slide.sa-slide-save {
+    height: calc(427.9 * var(--u) + 2 * var(--gap));
+  }
+  .sa-garland-g2 {
+    top: calc(417.8 * var(--u) + var(--gap));
+  }
+  .sa-slide.sa-slide-thu {
+    height: calc(661.3 * var(--u) + 2 * var(--gap));
+  }
+  .sa-garland-g3 {
+    top: calc(661.2 * var(--u) + var(--gap));
+  }
+}
+
+/* Typography Classes */
+.sa-t {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: calc(var(--fs) * var(--u));
+  line-height: calc(var(--lh) * var(--u));
+  letter-spacing: calc(var(--ls) * var(--u));
+  white-space: nowrap;
+  pointer-events: none;
+  font-kerning: normal;
+}
+
+.sa-line {
+  display: block;
+}
+
+.sa-stroke .sa-line {
+  -webkit-text-stroke: calc(var(--sw) * var(--u)) var(--sc);
+  paint-order: stroke fill;
+}
+
+.sa-gv { font-family: var(--gv); }
+.sa-ab { font-family: var(--ab); }
+.sa-bs { font-family: var(--bs); }
+.sa-sg { font-family: var(--sg); }
+.sa-ka { font-family: var(--ka); }
+
+/* Animation Entrances (Typing & Fade) */
+html[data-sa-io] .sa-rv:not([data-seen]) .sa-line {
+  clip-path: inset(-60% 100% -60% -12%);
+}
+
+html[data-sa-io] .sa-rv:not([data-seen]):is(.sa-pic, .sa-flight, .sa-dir, .sa-scratch) {
+  opacity: 0;
+}
+
+.sa-rv[data-seen] .sa-line {
+  animation: sa-type var(--td) steps(var(--n), end) both, sa-typed 1ms linear forwards;
+  animation-delay: calc(var(--sd, 0s) + 0.15s + var(--ld)), calc(var(--sd, 0s) + 0.15s + var(--ld) + var(--td));
+}
+
+.sa-rv[data-seen]:is(.sa-pic, .sa-dir, .sa-scratch) {
+  animation: sa-fade 0.95s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  animation-delay: calc(var(--sd, 0s) + 0.35s);
+}
+
+.sa-rv[data-seen].sa-flight {
+  animation: sa-draw 1.3s ease both;
+  animation-delay: calc(var(--sd, 0s) + 0.4s);
+}
+
+/* ===================================================
+   1. Interactive 3D Envelope
+   =================================================== */
+.sa-env {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  overflow: hidden;
+  cursor: pointer;
+  touch-action: none;
+  overscroll-behavior: contain;
+  background: radial-gradient(70% 60% at 50% 40%, #f6e4cf, #e9cfb2);
+  transition: opacity 0.6s ease 0.9s, visibility 0s linear 3.4s;
+}
+
+html[data-sa-open] .sa-root[data-stage="cover"] .sa-env {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.5s ease, visibility 0s linear 0.5s;
+}
+
+.sa-env[data-state="opening"] {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  background: transparent;
+}
+
+.sa-env-col, .sa-logo-col {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: min(100vw, 460px);
+  transform: translateX(-50%);
+  container-type: inline-size;
+  --u: calc(100cqw / 375);
+  overflow: hidden;
+}
+
+@media (min-width: 520px) {
+  .sa-env-col, .sa-logo-col {
+    width: min(460px, calc(100svh * 375 / 740));
+  }
+}
+
+.sa-env-col {
+  container-type: size;
+  perspective: 1300px;
+  perspective-origin: 50% 45%;
+}
+
+.sa-env-base {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(70% 40% at 50% 0%, rgba(120, 70, 30, 0.28), transparent 70%),
+    linear-gradient(180deg, #e4c6a6 0%, #eed8bf 34%, #f5e5d2 100%);
+  box-shadow: inset 0 calc(14 * var(--u)) calc(26 * var(--u)) rgba(110, 60, 25, 0.22);
+}
+
+.sa-env-flap, .sa-env-pocket {
+  position: absolute;
+  left: calc(-47 * var(--u));
+  width: calc(482 * var(--u));
+  height: calc(723 * var(--u));
+  max-width: none;
+  pointer-events: none;
+  user-select: none;
+  will-change: transform;
+}
+
+.sa-env-flap {
+  top: calc(-162 * var(--u));
+  z-index: 3;
+  transform-style: preserve-3d;
+  transform-origin: 50% 2.6%;
+}
+
+.sa-env-flap-front, .sa-env-flap-back {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.sa-env-flap-front {
+  filter: drop-shadow(0 calc(6 * var(--u)) calc(9 * var(--u)) rgba(120, 70, 30, 0.28));
+}
+
+.sa-env-flap-back {
+  transform: rotateY(180deg);
+  background: linear-gradient(180deg, #f8ecdc 0%, #f0dcc3 60%, #e6ccad 100%);
+  -webkit-mask: url("./assets/flap.webp") 0 0 / 100% 100% no-repeat;
+  mask: url("./assets/flap.webp") 0 0 / 100% 100% no-repeat;
+}
+
+.sa-env-pocket {
+  top: calc(135 * var(--u));
+  z-index: 2;
+  transform: scaleY(-1);
+}
+
+.sa-env-seal {
+  position: absolute;
+  z-index: 3;
+  left: calc(118 * var(--u));
+  top: calc(431 * var(--u));
+  width: calc(139 * var(--u));
+  height: calc(143 * var(--u));
+  border-radius: 50%;
+  filter: drop-shadow(0 calc(5 * var(--u)) calc(6 * var(--u)) rgba(70, 20, 10, 0.4));
+  transition: transform 0.6s cubic-bezier(0.3, 1.6, 0.5, 1), opacity 0.5s ease 0.3s;
+}
+
+.sa-env-seal svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  animation: sa-seal 2.6s ease-in-out infinite;
+}
+
+.sa-env-ring {
+  position: absolute;
+  inset: -6%;
+  border-radius: 50%;
+  border: calc(2 * var(--u)) solid rgba(255, 236, 200, 0.75);
+  animation: sa-ring 2.2s ease-out infinite;
+}
+
+.sa-env-foot {
+  position: absolute;
+  z-index: 3;
+  left: 0;
+  right: 0;
+  top: calc(600 * var(--u));
+  text-align: center;
+  color: #6c2118;
+  pointer-events: none;
+}
+
+.sa-env-guest {
+  font-family: var(--gv);
+  font-size: calc(25 * var(--u));
+  line-height: 1.3;
+  -webkit-text-stroke: calc(0.6 * var(--u)) #6c2118;
+  paint-order: stroke fill;
+}
+
+.sa-env[data-state="opening"] .sa-env-seal {
+  transform: scale(1.18);
+  opacity: 0;
+}
+
+.sa-env[data-state="opening"] .sa-env-ring,
+.sa-env[data-state="opening"] .sa-env-foot {
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+
+.sa-env[data-state="opening"] .sa-env-flap {
+  animation: sa-flap 1.9s cubic-bezier(0.4, 0, 0.3, 1) 0.15s both;
+}
+
+.sa-env[data-state="opening"] .sa-env-base {
+  opacity: 0;
+}
+
+.sa-env[data-state="opening"] .sa-env-pocket {
+  animation: sa-pocket 3.4s both;
+}
+
+.sa-root[data-stage="opening"] .sa-logo-col {
+  animation: sa-logo-in 3.4s cubic-bezier(0.3, 0, 0.2, 1) both;
+}
+
+.sa-env[data-state="opening"] {
+  transition: visibility 0s linear 3.4s, opacity 0s linear 3.4s;
+}
+
+/* ===================================================
+   2. The Logo Stage (Intermediate reveal)
+   =================================================== */
+.sa-logo {
+  position: fixed;
+  inset: 0;
+  z-index: 45;
+  overflow: hidden;
+  cursor: pointer;
+  touch-action: none;
+  background: radial-gradient(60% 50% at 50% 30%, rgba(255, 255, 255, 0.55), transparent 70%), #efdcc6;
+  transition: opacity 650ms ease;
+}
+
+.sa-root[data-stage="card"] .sa-logo,
+.sa-root[data-stage="leaving"] .sa-logo {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  transition: opacity 650ms ease, visibility 0s linear 650ms;
+}
+
+.sa-logo-col {
+  container-type: size;
+  background: #f7e6d6 url("./assets/logo-bg.webp") 50% 0 / cover no-repeat;
+}
+
+.sa-logo-board {
+  position: absolute;
+  left: 50%;
+  top: calc(44.5cqh - 337 * var(--u));
+  width: calc(375 * var(--u));
+  height: calc(812 * var(--u));
+  transform: translateX(-50%);
+  --u: min(calc(100cqw / 380), calc(71cqh / 514));
+}
+
+.sa-goldmono {
+  height: calc(308 * var(--u));
+  overflow: visible;
+  filter: drop-shadow(0 calc(2 * var(--u)) calc(3 * var(--u)) rgba(120, 75, 20, 0.35));
+}
+
+/* ===================================================
+   3. The Main Invitation Card
+   =================================================== */
+.sa-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.sa-bg-stick {
+  position: sticky;
+  top: -100vh;
+  top: -100svh;
+  height: 200vh;
+  height: calc(100svh + 100lvh);
+  overflow: hidden;
+  background: #f3e6d3;
+}
+
+.sa-bg-img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  aspect-ratio: 351 / 2000;
+  background: url("./assets/bg-top.webp") 0 0 / 100% 100% no-repeat;
+}
+
+.sa-curtains {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  --u: calc(100cqw / 375);
+  pointer-events: none;
+}
+
+.sa-slide {
+  position: relative;
+  height: calc(var(--bh) * var(--u));
+}
+
+.sa-board {
+  position: absolute;
+  inset: 0;
+}
+
+.sa-slide-first {
+  height: auto;
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  --u: min(calc(100cqw / 375 * var(--zoom)), calc(100svh / var(--bh)));
+  --zoom: 1.2;
+}
+
+.sa-slide-first .sa-board {
+  position: relative;
+  z-index: 1;
+  inset: auto;
+  flex: none;
+  width: calc(375 * var(--u));
+  height: calc(var(--bh) * var(--u));
+}
+
+.sa-grp {
+  height: 0;
+}
+
+.sa-flight {
+  height: calc(var(--h) * var(--u));
+  overflow: visible;
+  fill: #231f20;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Ambient Floating Petals & Glows */
+.sa-ambient {
+  position: fixed;
+  inset: 0;
+  z-index: 61;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.sa-ambient-col {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: min(100vw, 460px);
+  transform: translateX(-50%);
+  container-type: inline-size;
+  --u: calc(100cqw / 375);
+}
+
+.sa-amb {
+  position: absolute;
+  top: -4%;
+  will-change: transform;
+  animation: sa-amb-fall var(--t) linear infinite;
+  animation-delay: var(--d);
+}
+
+.sa-amb i {
+  display: block;
+  width: calc(var(--w) * var(--u));
+  height: calc(var(--w) * 1.3 * var(--u));
+  background: center / contain no-repeat;
+  animation: sa-amb-flutter var(--t2) ease-in-out infinite alternate;
+  animation-delay: var(--d);
+}
+
+.sa-glow {
+  width: calc(46 * var(--u));
+  height: calc(46 * var(--u));
+  margin: calc(-23 * var(--u)) 0 0 calc(-23 * var(--u));
+  border-radius: 50%;
+  pointer-events: none;
+  mix-blend-mode: screen;
+  background: radial-gradient(circle, rgba(255, 240, 190, 0.95) 0 10%, rgba(255, 200, 110, 0.5) 30%, rgba(255, 170, 70, 0.14) 52%, transparent 70%);
+  animation: sa-flicker 1.9s ease-in-out infinite;
+  animation-delay: var(--d);
+}
+
+.sa-root:has(.sa-slide-first:not([data-live])) .sa-glow {
+  animation-play-state: paused;
+}
+
+/* ===================================================
+   4. Golden Scratch Card Countdown
+   =================================================== */
+.sa-scratch {
+  height: calc(68 * var(--u));
+  border-radius: calc(9 * var(--u));
+  overflow: hidden;
+  outline: none;
+  box-shadow: 0 calc(3 * var(--u)) calc(8 * var(--u)) rgba(110, 70, 20, 0.22);
+  --sa-scratch-font: var(--gv);
+  cursor: pointer;
+}
+
+.sa-scratch:focus-visible {
+  box-shadow: 0 0 0 calc(2 * var(--u)) #b20e00;
+}
+
+.sa-count {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: calc(1 * var(--u));
+  background: rgba(255, 248, 236, 0.72);
+  border: calc(1.2 * var(--u)) solid #d9b46a;
+  border-radius: inherit;
+  color: #6c2118;
+  font-family: var(--bs);
+}
+
+.sa-count-part {
+  display: flex;
+  align-items: center;
+  gap: calc(1 * var(--u));
+}
+
+.sa-count-cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: calc(42 * var(--u));
+}
+
+.sa-count-cell b {
+  font-weight: 400;
+  font-size: calc(22 * var(--u));
+  line-height: 1.05;
+  color: #b20e00;
+  font-variant-numeric: tabular-nums;
+}
+
+.sa-count-cell small {
+  font-size: calc(7.2 * var(--u));
+  letter-spacing: calc(0.7 * var(--u));
+  text-transform: uppercase;
+  line-height: 1.2;
+  margin-top: calc(2 * var(--u));
+}
+
+.sa-count-sep {
+  font-weight: 400;
+  font-size: calc(17 * var(--u));
+  line-height: 1;
+  margin-top: calc(-11 * var(--u));
+  color: #6c2118;
+}
+
+.sa-scratch-face, .sa-scratch-gold {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+}
+
+.sa-scratch-face {
+  display: grid;
+  place-items: center;
+  font-style: normal;
+  font-family: var(--gv);
+  font-size: calc(23 * var(--u));
+  color: #9a2a12;
+  background: linear-gradient(135deg, #b98a2c, #e2c063 25%, #c99d3b 50%, #e7c96d 75%, #b07f25);
+  pointer-events: none;
+}
+
+.sa-scratch-gold {
+  touch-action: none;
+  cursor: grab;
+  transition: opacity 0.6s ease;
+}
+
+.sa-scratch[data-painted] .sa-scratch-face {
+  display: none;
+}
+
+.sa-scratch[data-state="done"] :is(.sa-scratch-gold, .sa-scratch-face) {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.sa-sprinkle {
+  height: calc(68 * var(--u));
+  pointer-events: none;
+  z-index: 3;
+}
+
+.sa-sprinkle > span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  animation: sa-sx var(--dur) cubic-bezier(0.15, 0.6, 0.35, 1) var(--dl) both;
+}
+
+.sa-sprinkle > span > span {
+  display: block;
+  animation: sa-sy var(--dur) linear var(--dl) both;
+}
+
+.sa-sprinkle i {
+  display: block;
+  width: calc(var(--w) * var(--u));
+  height: calc(var(--w) * 1.3 * var(--u));
+  margin: calc(var(--w) * -0.65 * var(--u)) 0 0 calc(var(--w) * -0.5 * var(--u));
+  background: center / contain no-repeat;
+  animation: sa-twirl var(--dur) linear var(--dl) both;
+}
+
+/* ===================================================
+   5. Venue Directions Button
+   =================================================== */
+.sa-dir-row {
+  display: flex;
+  justify-content: center;
+}
+
+.sa-dir {
+  display: inline-flex;
+  align-items: center;
+  gap: calc(7 * var(--u));
+  min-height: 40px;
+  padding: calc(8 * var(--u)) calc(18 * var(--u)) calc(8 * var(--u)) calc(14 * var(--u));
+  border-radius: 999px;
+  background: rgba(255, 250, 242, 0.96);
+  color: #6c2118;
+  font-family: var(--bs);
+  font-size: calc(13 * var(--u));
+  letter-spacing: calc(0.4 * var(--u));
+  white-space: nowrap;
+  text-decoration: none;
+  box-shadow: inset 0 0 0 calc(1.2 * var(--u)) rgba(108, 33, 24, 0.35), 0 calc(2 * var(--u)) calc(8 * var(--u)) rgba(80, 30, 10, 0.22);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.sa-dir:hover {
+  transform: translateY(-2px);
+  box-shadow: inset 0 0 0 calc(1.2 * var(--u)) rgba(108, 33, 24, 0.5), 0 calc(4 * var(--u)) calc(12 * var(--u)) rgba(80, 30, 10, 0.3);
+}
+
+.sa-dir svg {
+  width: calc(12 * var(--u));
+  height: calc(17 * var(--u));
+  flex: none;
+}
+
+/* ===================================================
+   6. Footer Notice & Links
+   =================================================== */
+.sa-snote {
+  text-align: center;
+  color: #6c2118;
+  font-family: var(--bs);
+}
+
+.sa-snote-kicker {
+  font-size: calc(11 * var(--u));
+  letter-spacing: calc(2.4 * var(--u));
+  text-transform: uppercase;
+  color: #a8741f;
+}
+
+.sa-snote-line {
+  margin-top: calc(8 * var(--u)) !important;
+  font-size: calc(14 * var(--u));
+  line-height: 1.45;
+}
+
+.sa-snote-line b {
+  font-weight: 400;
+  color: #b20e00;
+}
+
+.sa-snote-links {
+  display: flex;
+  justify-content: center;
+  gap: calc(10 * var(--u));
+  margin-top: calc(14 * var(--u)) !important;
+}
+
+.sa-snote-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 0 calc(16 * var(--u));
+  border-radius: 999px;
+  font-size: calc(13 * var(--u));
+  text-decoration: none;
+  color: #6c2118;
+  box-shadow: inset 0 0 0 calc(1.2 * var(--u)) rgba(108, 33, 24, 0.35);
+  background: rgba(255, 250, 242, 0.9);
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.sa-snote-links a:hover {
+  transform: translateY(-2px);
+  opacity: 0.95;
+}
+
+.sa-snote-links a:first-child {
+  background: #b20e00;
+  color: #fff8ee;
+  box-shadow: 0 calc(2 * var(--u)) calc(8 * var(--u)) rgba(120, 20, 10, 0.3);
+}
+
+/* Floating Bottom Bar */
+.sa-sbar {
+  position: fixed;
+  z-index: 55;
+  left: 50%;
+  bottom: max(12px, env(safe-area-inset-bottom));
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 6px 6px 14px;
+  border-radius: 999px;
+  background: rgba(255, 248, 238, 0.96);
+  box-shadow: inset 0 0 0 1px rgba(201, 158, 106, 0.6), 0 8px 20px -8px rgba(80, 35, 10, 0.45);
+  font-family: var(--bs);
+  color: #6c2118;
+  white-space: nowrap;
+  animation: sa-sbar-in 0.6s ease both;
+}
+
+.sa-sbar-tag {
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #a8741f;
+}
+
+.sa-sbar-cta {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  padding: 0 14px;
+  border-radius: 999px;
+  background: #b20e00;
+  color: #fff8ee;
+  font-size: 13px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* ===================================================
+   7. Floating Audio Control Button
+   =================================================== */
+.sa-audio-btn {
+  position: fixed;
+  top: 18px;
+  right: 18px;
+  z-index: 70;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 248, 236, 0.95);
+  border: 1.5px solid #d9b46a;
+  box-shadow: 0 4px 14px rgba(100, 35, 15, 0.25);
+  color: #b20e00;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.25s cubic-bezier(0.3, 1.5, 0.5, 1), background 0.2s ease;
+}
+
+.sa-audio-btn:hover {
+  transform: scale(1.1);
+  background: #fffdf9;
+}
+
+.sa-audio-btn.playing svg {
+  animation: sa-spin 6s linear infinite;
+}
+
+@keyframes sa-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* ===================================================
+   8. Animation Keyframes
+   =================================================== */
+@keyframes sa-type {
+  from { clip-path: inset(-60% 100% -60% -12%); }
+  to { clip-path: inset(-60% -12% -60% -12%); }
+}
+
+@keyframes sa-typed {
+  from, to { clip-path: none; }
+}
+
+@keyframes sa-fade {
+  from {
+    opacity: 0;
+    transform: translate3d(0, calc(10 * var(--u)), 0) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes sa-draw {
+  from {
+    opacity: 0;
+    clip-path: inset(0 0 100% 0);
+  }
+  to {
+    opacity: 1;
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes sa-sbar-in {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 12px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+@keyframes sa-flap {
+  from { transform: rotateX(0deg); }
+  to { transform: rotateX(180deg); }
+}
+
+@keyframes sa-pocket {
+  0%, 26.5% {
+    transform: translateY(0) scaleY(-1);
+    animation-timing-function: cubic-bezier(0.45, 0, 0.3, 1);
+  }
+  55.9%, 76.5% {
+    transform: translateY(calc(310 * var(--u))) scaleY(-1);
+    animation-timing-function: cubic-bezier(0.5, 0, 0.75, 0);
+  }
+  100% {
+    transform: translateY(calc(310 * var(--u) + 120%)) scaleY(-1);
+  }
+}
+
+@keyframes sa-logo-in {
+  from { transform: translateX(-50%) scale(1.08); }
+  to { transform: translateX(-50%) scale(1); }
+}
+
+@keyframes sa-seal {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.035); }
+}
+
+@keyframes sa-ring {
+  0% {
+    opacity: 0.9;
+    transform: scale(0.92);
+  }
+  80%, 100% {
+    opacity: 0;
+    transform: scale(1.22);
+  }
+}
+
+@keyframes sa-amb-fall {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 0, 0);
+  }
+  6% { opacity: 0.95; }
+  90% { opacity: 0.9; }
+  100% {
+    opacity: 0;
+    transform: translate3d(calc(var(--dx) * var(--u)), 108vh, 0);
+  }
+}
+
+@keyframes sa-amb-flutter {
+  from {
+    transform: rotate(-35deg) translateX(calc(-7 * var(--u))) scaleX(1);
+  }
+  to {
+    transform: rotate(45deg) translateX(calc(7 * var(--u))) scaleX(0.7);
+  }
+}
+
+@keyframes sa-flicker {
+  0%, 100% {
+    opacity: 0.75;
+    transform: scale(1);
+  }
+  25% {
+    opacity: 1;
+    transform: scale(1.1, 1.14);
+  }
+  55% {
+    opacity: 0.6;
+    transform: scale(0.93);
+  }
+  78% {
+    opacity: 0.9;
+    transform: scale(1.04, 0.98);
+  }
+}
+
+@keyframes sa-sx {
+  from { transform: translateX(0); }
+  to { transform: translateX(calc(var(--dx) * var(--u))); }
+}
+
+@keyframes sa-sy {
+  0% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0.2, 0.7, 0.4, 1);
+  }
+  32% {
+    transform: translateY(calc(var(--up) * var(--u)));
+    animation-timing-function: cubic-bezier(0.45, 0, 0.8, 0.55);
+  }
+  100% {
+    transform: translateY(calc(var(--fall) * var(--u)));
+  }
+}
+
+@keyframes sa-twirl {
+  0% {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.3);
+  }
+  10% {
+    opacity: 1;
+    transform: rotate(calc(var(--rot) * 0.1)) scale(1);
+  }
+  78% { opacity: 1; }
+  100% {
+    opacity: 0;
+    transform: rotate(var(--rot)) scale(0.85);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sa-root * { animation: none !important; }
+  html[data-sa-io] .sa-rv:not([data-seen]) .sa-line { clip-path: none; }
+  html[data-sa-io] .sa-rv:not([data-seen]):is(.sa-pic, .sa-flight, .sa-dir, .sa-scratch) { opacity: 1; }
+  .sa-env-flap, .sa-env-pocket, .sa-env-seal, .sa-env-base { transition: none; }
+  .sa-env[data-state="opening"] { transition: opacity 0.4s ease, visibility 0s linear 0.45s; }
+  .sa-sprinkle, .sa-ambient { display: none; }
+}
